@@ -312,7 +312,7 @@ export default function Review() {
             <CtaBand
               title="Ready To See It For Yourself?"
               lead="Explore the platform and decide whether Trader AI is a good fit for the way you like to research markets."
-              primary={{ label: 'Get Started', href: '/contact/' }}
+              primary={{ label: 'Get Started', href: '/register/' }}
               secondary={{ label: 'Explore Features', href: '/features/' }}
             />
           </Reveal>

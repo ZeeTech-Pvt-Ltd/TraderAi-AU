@@ -65,7 +65,7 @@ export default function Header({ active }) {
             ))}
           </ul>
           <a
-            href="/contact/"
+            href="/register/"
             className="ml-2 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-primary px-4 py-2 font-display text-sm font-semibold text-white no-underline transition-colors hover:bg-primary-600"
           >
             Get Started
@@ -105,7 +105,7 @@ export default function Header({ active }) {
               ))}
             </ul>
             <a
-              href="/contact/"
+              href="/register/"
               onClick={() => setOpen(false)}
               className="mt-3 block rounded-full bg-primary px-5 py-3 text-center font-display text-base font-semibold text-white no-underline"
             >

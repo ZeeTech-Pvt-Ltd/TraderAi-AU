@@ -1,6 +1,6 @@
 import Button from './Button';
 
-export default function CtaBand({ title, lead, primary = { label: 'Get Started', href: '/contact/' }, secondary }) {
+export default function CtaBand({ title, lead, primary = { label: 'Get Started', href: '/register/' }, secondary }) {
   return (
     <div
       className="relative overflow-hidden rounded-[28px] bg-navy-800 px-6 py-12 text-center md:px-16 md:py-16"

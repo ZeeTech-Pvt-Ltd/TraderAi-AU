@@ -1,5 +1,5 @@
 const cardBase =
-  'rounded-2xl border border-line bg-white transition-all duration-200 hover:-translate-y-1 hover:border-line-strong hover:shadow-[0_4px_14px_rgba(10,22,38,0.08),0_12px_32px_rgba(10,22,38,0.07)]';
+  'h-full rounded-2xl border border-line bg-white transition-all duration-200 hover:-translate-y-1 hover:border-line-strong hover:shadow-[0_4px_14px_rgba(10,22,38,0.08),0_12px_32px_rgba(10,22,38,0.07)]';
 
 function IconBox({ icon: Icon, tone, size = 'md' }) {
   const dim = size === 'lg' ? 'h-12 w-12' : 'h-11 w-11';
@@ -44,21 +44,6 @@ export function FeatureCard({ icon, tone = 'primary', title, children, bullets =
           ))}
         </ul>
       )}
-    </article>
-  );
-}
-
-export function StepCard({ num, title, children }) {
-  return (
-    <article className={`${cardBase} p-6`}>
-      <div className="mb-3 inline-flex items-center gap-2">
-        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-soft font-display text-xs font-bold text-primary">
-          {String(num).padStart(2, '0')}
-        </span>
-        <span className="font-display text-xs font-bold uppercase tracking-wide text-primary">Step</span>
-      </div>
-      <h3 className="text-base">{title}</h3>
-      <p className="mt-1.5 text-sm leading-relaxed text-ink-500">{children}</p>
     </article>
   );
 }

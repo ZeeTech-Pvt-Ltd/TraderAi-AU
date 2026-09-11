@@ -8,7 +8,8 @@ import FaqList from '../components/FaqList';
 import HeroDashboard from '../components/HeroDashboard';
 import Checklist from '../components/Checklist';
 import ProcessFlow from '../components/ProcessFlow';
-import { ValueCard, FeatureCard, StepCard } from '../components/cards';
+import Steps from '../components/Steps';
+import { ValueCard, FeatureCard } from '../components/cards';
 import {
   Activity,
   BarChart3,
@@ -153,7 +154,7 @@ export default function Home() {
                 more informed trading decisions.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <Button href="/contact/" size="lg" icon>
+                <Button href="/register/" size="lg" icon>
                   Get Started
                 </Button>
                 <Button href="/ai-trading/" variant="ghost-light" size="lg">
@@ -226,14 +227,6 @@ export default function Home() {
                     make decisions for you.
                   </p>
                 </div>
-              </div>
-            </Reveal>
-            <Reveal>
-              <div>
-                <ValueCard icon={Check} tone="accent" title="Who Can Benefit?">
-                  Anyone who wants a clearer view of the market. That includes beginners learning
-                  the ropes and experienced traders who want to speed up their research.
-                </ValueCard>
                 <Checklist
                   items={[
                     'Tools for research, not financial advice',
@@ -242,6 +235,17 @@ export default function Home() {
                   ]}
                 />
               </div>
+            </Reveal>
+            <Reveal>
+              <img
+                src="/assets/img/img-1.png"
+                alt="Trader AI platform illustration"
+                width={1274}
+                height={1234}
+                loading="lazy"
+                decoding="async"
+                className="h-auto w-full"
+              />
             </Reveal>
           </div>
         </Container>
@@ -257,15 +261,9 @@ export default function Home() {
               lead="Five simple steps. The tools support your research, but every decision stays with you."
             />
           </Reveal>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {steps.map((s, i) => (
-              <Reveal key={s.title} delay={i * 60}>
-                <StepCard num={i + 1} title={s.title}>
-                  {s.text}
-                </StepCard>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal>
+            <Steps items={steps} />
+          </Reveal>
           <Reveal>
             <div className="mt-8">
               <Callout variant="caution">
@@ -343,10 +341,15 @@ export default function Home() {
             </Reveal>
             <Reveal>
               <div>
-                <ValueCard icon={Cpu} title="How AI Helps">
-                  AI works through market information faster, finds patterns you might miss, and
-                  organises it all into clear insights you can actually use.
-                </ValueCard>
+                <img
+                  src="/assets/img/img-2.png"
+                  alt="AI trading tools illustration"
+                  width={1277}
+                  height={1231}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-auto w-full"
+                />
                 <div className="mt-4">
                   <Callout variant="caution">
                     <p>
@@ -448,7 +451,16 @@ export default function Home() {
             </Reveal>
             <Reveal>
               <div>
-                <div className="mb-4">
+                <img
+                  src="/assets/img/img-3.png"
+                  alt="Australian market analysis illustration"
+                  width={1277}
+                  height={1231}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-auto w-full"
+                />
+                <div className="mt-4">
                   <Callout variant="caution">
                     <p>
                       <strong className="text-ink-900">Trader AI is an informational platform.</strong>{' '}
@@ -457,10 +469,6 @@ export default function Home() {
                     </p>
                   </Callout>
                 </div>
-                <ValueCard icon={Clock} tone="accent" title="Research First, Then Act">
-                  Australian investors value doing their homework. Trader AI is built to support
-                  that habit, not replace it.
-                </ValueCard>
               </div>
             </Reveal>
           </div>
@@ -493,7 +501,7 @@ export default function Home() {
             <CtaBand
               title="Ready To Explore AI Trading?"
               lead="Discover practical AI powered tools for market analysis and trading research."
-              primary={{ label: 'Get Started', href: '/contact/' }}
+              primary={{ label: 'Get Started', href: '/register/' }}
               secondary={{ label: 'Learn More', href: '/how-it-works/' }}
             />
           </Reveal>

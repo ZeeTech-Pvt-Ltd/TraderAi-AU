@@ -6,7 +6,8 @@ import PageHero from '../components/PageHero';
 import Callout from '../components/Callout';
 import CtaBand from '../components/CtaBand';
 import ProcessFlow from '../components/ProcessFlow';
-import { ValueCard, StepCard } from '../components/cards';
+import Steps from '../components/Steps';
+import { ValueCard } from '../components/cards';
 import { Check, ClipboardList, Cpu, Database, Lightbulb, MousePointer2 } from 'lucide-react';
 
 const processNodes = [
@@ -39,7 +40,7 @@ export default function HowItWorks() {
         lead="Trader AI turns market data into clear, plain language insights. Here's the full journey, from your first look to your final decision."
       >
         <div className="mt-7 flex flex-wrap gap-3">
-          <Button href="/contact/">Get Started</Button>
+          <Button href="/register/">Get Started</Button>
           <Button href="/features/" variant="ghost-light">
             Explore Features
           </Button>
@@ -72,15 +73,9 @@ export default function HowItWorks() {
               lead="Here's what it looks like from your side, one step at a time."
             />
           </Reveal>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {journey.map((s, i) => (
-              <Reveal key={s.title} delay={i * 60}>
-                <StepCard num={i + 1} title={s.title}>
-                  {s.text}
-                </StepCard>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal>
+            <Steps items={journey} />
+          </Reveal>
           <Reveal>
             <div className="mt-8">
               <Callout variant="caution">
@@ -120,7 +115,7 @@ export default function HowItWorks() {
             <CtaBand
               title="See The Process In Action"
               lead="Explore the features that power the Trader AI journey and decide if it's right for you."
-              primary={{ label: 'Get Started', href: '/contact/' }}
+              primary={{ label: 'Get Started', href: '/register/' }}
               secondary={{ label: 'Read The FAQ', href: '/faq/' }}
             />
           </Reveal>

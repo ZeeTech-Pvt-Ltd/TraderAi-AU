@@ -15,6 +15,8 @@ export default defineConfig({
         'how-it-works': 'how-it-works/index.html',
         review: 'trader-ai-review-australia/index.html',
         faq: 'faq/index.html',
+        register: 'register/index.html',
+        'thank-you': 'thank-you/index.html',
         contact: 'contact/index.html',
         privacy: 'privacy-policy/index.html',
         terms: 'terms-and-conditions/index.html',

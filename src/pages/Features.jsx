@@ -57,7 +57,7 @@ export default function Features() {
         lead="A focused set of tools built around patterns, trends, risk and clear analysis. Here's what each one does, and how it can help you research markets."
       >
         <div className="mt-7 flex flex-wrap gap-3">
-          <Button href="/contact/">Get Started</Button>
+          <Button href="/register/">Get Started</Button>
           <Button href="/how-it-works/" variant="ghost-light">
             See How It Works
           </Button>
@@ -142,7 +142,7 @@ export default function Features() {
             <CtaBand
               title="Ready To Try These Tools?"
               lead="See how Trader AI brings patterns, trends and risk together into one clear, organised view."
-              primary={{ label: 'Get Started', href: '/contact/' }}
+              primary={{ label: 'Get Started', href: '/register/' }}
               secondary={{ label: 'See How It Works', href: '/how-it-works/' }}
             />
           </Reveal>

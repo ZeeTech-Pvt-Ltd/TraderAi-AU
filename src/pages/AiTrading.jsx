@@ -282,7 +282,7 @@ export default function AiTrading() {
             <CtaBand
               title="Ready To Explore AI Trading?"
               lead="Discover practical AI powered tools for market analysis and trading research."
-              primary={{ label: 'Get Started', href: '/contact/' }}
+              primary={{ label: 'Get Started', href: '/register/' }}
               secondary={{ label: 'Read The Trader AI Review', href: '/trader-ai-review-australia/' }}
             />
           </Reveal>
