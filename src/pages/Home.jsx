@@ -142,10 +142,6 @@ export default function Home() {
         <Container>
           <div className="grid items-center gap-12 py-16 md:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
             <div>
-              <span className="mb-4 inline-flex items-center gap-2 font-display text-xs font-semibold uppercase tracking-wider text-primary">
-                <span className="h-0.5 w-5 rounded bg-accent" aria-hidden="true" />
-                AI Assisted Trading Tools
-              </span>
               <h1 className="text-4xl font-bold text-ondark md:text-5xl lg:text-[3.35rem]">
                 Trader AI <span className="text-accent">Australia</span>
               </h1>

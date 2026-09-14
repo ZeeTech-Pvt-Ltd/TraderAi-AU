@@ -22,12 +22,6 @@ function FeatureRow({ num, icon, tone, title, paragraphs, bullets, soft }) {
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
           <Reveal>
             <div>
-              <div className="mb-3 flex items-center gap-2">
-                <span className="h-0.5 w-5 rounded bg-accent" aria-hidden="true" />
-                <span className="font-display text-xs font-semibold uppercase tracking-wider text-primary">
-                  Feature 0{num}
-                </span>
-              </div>
               <h2 className="text-3xl md:text-4xl">{title}</h2>
               <div className="mt-4 space-y-4 text-ink-500">
                 {paragraphs.map((p, i) => (

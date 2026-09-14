@@ -2,8 +2,6 @@ import Container from '../components/Container';
 import Button from '../components/Button';
 import SectionHead from '../components/SectionHead';
 import Reveal from '../components/Reveal';
-import PageHero from '../components/PageHero';
-import Callout from '../components/Callout';
 import CtaBand from '../components/CtaBand';
 import FaqList from '../components/FaqList';
 import ProsCons from '../components/ProsCons';
@@ -89,44 +87,87 @@ const faqs = [
 export default function AiTrading() {
   return (
     <>
-      <PageHero
-        crumb="AI Trading"
-        title="AI Trading"
-        lead="AI trading uses technology to help you research markets faster, spot possible patterns, and make more informed decisions. Here's how it works, what it can do, and where its limits are."
+      <section
+        className="border-b border-white/10 bg-navy-900 text-ondark"
+        style={{
+          backgroundImage: 'radial-gradient(900px 400px at 80% -10%, rgba(23,105,224,0.2), transparent 60%)',
+        }}
       >
-        <div className="mt-7 flex flex-wrap gap-3">
-          <Button href="/features/">Explore Features</Button>
-          <Button href="/how-it-works/" variant="ghost-light">
-            See How It Works
-          </Button>
-        </div>
-      </PageHero>
+        <Container>
+          <div className="grid items-center gap-10 py-14 md:py-20 lg:grid-cols-2 lg:gap-14">
+            <div>
+              <nav className="mb-4 text-sm text-ondark-muted" aria-label="Breadcrumb">
+                <a href="/" className="text-ondark-muted no-underline hover:text-ondark">
+                  Home
+                </a>
+                <span className="mx-1.5 opacity-60">/</span>
+                <span aria-current="page">AI Trading</span>
+              </nav>
+              <h1 className="text-4xl text-ondark md:text-5xl">AI Trading</h1>
+              <p className="mt-4 max-w-[46ch] text-lg text-ondark-muted">
+                AI trading uses technology to help you research markets faster, spot possible
+                patterns, and make more informed decisions. Here's how it works, what it can do, and
+                where its limits are.
+              </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <Button href="/features/">Explore Features</Button>
+                <Button href="/how-it-works/" variant="ghost-light">
+                  See How It Works
+                </Button>
+              </div>
+            </div>
+            <img
+              src="/assets/img/traderimg1.png"
+              alt="AI trading platform illustration"
+              width={1254}
+              height={1254}
+              loading="eager"
+              decoding="async"
+              className="h-auto w-full"
+            />
+          </div>
+        </Container>
+      </section>
 
       {/* What Is AI Trading */}
       <section className="py-16 md:py-24">
         <Container>
-          <Reveal>
-            <SectionHead eyebrow="The Basics" title="What Is AI Trading?" align="left" className="mb-6" />
-          </Reveal>
-          <Reveal>
-            <div className="max-w-3xl space-y-4 text-ink-500">
-              <p>
-                AI trading means using artificial intelligence to support the way you research and
-                understand financial markets. Rather than manually working through every chart and
-                data point, AI can process market information quickly and surface the parts most
-                likely to matter.
-              </p>
-              <p>
-                The goal is simple: help you see patterns, trends and risks more clearly, so you can
-                make decisions with better information behind them. AI trading is a support tool. It
-                does not trade for you, and it does not remove the need for your own judgement.
-              </p>
-              <p>
-                At its core, AI trading is about turning a large amount of market information into
-                something clearer and easier to act on.
-              </p>
-            </div>
-          </Reveal>
+          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+            <Reveal>
+              <img
+                src="/assets/img/ai-analysis.png"
+                alt="AI market analysis showing detected patterns and trend insights"
+                width={1120}
+                height={800}
+                loading="lazy"
+                decoding="async"
+                className="mx-auto h-auto w-full max-w-md"
+              />
+            </Reveal>
+            <Reveal>
+              <div>
+                <SectionHead eyebrow="The Basics" title="What Is AI Trading?" align="left" className="mb-4" />
+                <div className="space-y-4 text-ink-500">
+                  <p>
+                    AI trading means using artificial intelligence to support the way you research
+                    and understand financial markets. Rather than manually working through every
+                    chart and data point, AI can process market information quickly and surface the
+                    parts most likely to matter.
+                  </p>
+                  <p>
+                    The goal is simple: help you see patterns, trends and risks more clearly, so you
+                    can make decisions with better information behind them. AI trading is a support
+                    tool. It does not trade for you, and it does not remove the need for your own
+                    judgement.
+                  </p>
+                  <p>
+                    At its core, AI trading is about turning a large amount of market information
+                    into something clearer and easier to act on.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </Container>
       </section>
 
@@ -224,16 +265,6 @@ export default function AiTrading() {
               </Reveal>
             ))}
           </div>
-          <Reveal>
-            <div className="mt-8">
-              <Callout variant="caution">
-                <p>
-                  <strong className="text-ink-900">Financial markets involve risk.</strong> The value
-                  of investments can go down as well as up, and you could lose the money you put in.
-                </p>
-              </Callout>
-            </div>
-          </Reveal>
         </Container>
       </section>
 
