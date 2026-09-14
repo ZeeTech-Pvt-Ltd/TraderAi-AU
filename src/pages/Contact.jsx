@@ -12,13 +12,7 @@ export default function Contact() {
             'radial-gradient(900px 400px at 80% -10%, rgba(23,105,224,0.22), transparent 60%), radial-gradient(700px 360px at 5% 110%, rgba(15,167,158,0.16), transparent 55%)',
         }}
       >
-        <img
-          src="/assets/img/hero-decor.png"
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-        />
-        <Container className="relative">
+        <Container>
           <div className="grid items-center gap-10 py-14 md:py-20 lg:grid-cols-2 lg:gap-14">
             <div>
               <h1 className="text-4xl text-ondark md:text-5xl">Get Started With Trader AI</h1>

@@ -2,7 +2,6 @@ import Container from '../components/Container';
 import Button from '../components/Button';
 import SectionHead from '../components/SectionHead';
 import Reveal from '../components/Reveal';
-import PageHero from '../components/PageHero';
 import CtaBand from '../components/CtaBand';
 import Checklist from '../components/Checklist';
 import { ValueCard } from '../components/cards';
@@ -45,18 +44,39 @@ function FeatureRow({ num, icon, tone, title, paragraphs, bullets, soft }) {
 export default function Features() {
   return (
     <>
-      <PageHero
-        crumb="Features"
-        title="AI Trading Features"
-        lead="A focused set of tools built around patterns, trends, risk and clear analysis. Here's what each one does, and how it can help you research markets."
+      <section
+        className="relative overflow-hidden border-b border-white/10 bg-navy-900 text-ondark"
+        style={{
+          backgroundImage: 'radial-gradient(900px 400px at 80% -10%, rgba(23,105,224,0.22), transparent 60%)',
+        }}
       >
-        <div className="mt-7 flex flex-wrap gap-3">
-          <Button href="/register/">Get Started</Button>
-          <Button href="/how-it-works/" variant="ghost-light">
-            See How It Works
-          </Button>
-        </div>
-      </PageHero>
+        <Container>
+          <div className="grid items-center gap-10 py-14 md:py-20 lg:grid-cols-2 lg:gap-14">
+            <div>
+              <h1 className="text-4xl text-ondark md:text-5xl">AI Trading Features</h1>
+              <p className="mt-4 max-w-[46ch] text-lg text-ondark-muted">
+                A focused set of tools built around patterns, trends, risk and clear analysis.
+                Here's what each one does, and how it can help you research markets.
+              </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <Button href="/register/">Get Started</Button>
+                <Button href="/how-it-works/" variant="ghost-light">
+                  See How It Works
+                </Button>
+              </div>
+            </div>
+            <img
+              src="/assets/img/images4.webp"
+              alt="Trader AI trading features illustration"
+              width={1277}
+              height={1231}
+              loading="eager"
+              decoding="async"
+              className="h-auto w-full max-w-[440px]"
+            />
+          </div>
+        </Container>
+      </section>
 
       <FeatureRow
         num={1}
