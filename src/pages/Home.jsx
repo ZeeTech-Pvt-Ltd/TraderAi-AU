@@ -233,7 +233,7 @@ export default function Home() {
             </Reveal>
             <Reveal>
               <img
-                src="/assets/img/img-1.png"
+                src="/assets/img/img-1.webp"
                 alt="Trader AI platform illustration"
                 width={1274}
                 height={1234}
@@ -327,7 +327,7 @@ export default function Home() {
             <Reveal>
               <div>
                 <img
-                  src="/assets/img/img-2.png"
+                  src="/assets/img/img-2.webp"
                   alt="AI trading tools illustration"
                   width={1277}
                   height={1231}
@@ -429,7 +429,7 @@ export default function Home() {
             <Reveal>
               <div>
                 <img
-                  src="/assets/img/img-3.png"
+                  src="/assets/img/img-3.webp"
                   alt="Australian market analysis illustration"
                   width={1277}
                   height={1231}

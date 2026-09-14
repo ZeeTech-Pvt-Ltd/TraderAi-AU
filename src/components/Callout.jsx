@@ -15,7 +15,7 @@ export default function Callout({ variant = 'info', children }) {
         className={`mt-0.5 h-5 w-5 shrink-0 ${caution ? 'text-amber' : 'text-primary'}`}
         aria-hidden="true"
       />
-      <div className="text-[15px] text-ink-700">{children}</div>
+      <div className="min-w-0 flex-1 text-[15px] text-ink-700">{children}</div>
     </div>
   );
 }

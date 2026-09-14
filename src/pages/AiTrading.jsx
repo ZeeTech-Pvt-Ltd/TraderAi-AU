@@ -110,7 +110,7 @@ export default function AiTrading() {
               </div>
             </div>
             <img
-              src="/assets/img/traderimg1.png"
+              src="/assets/img/traderimg1.webp"
               alt="AI trading platform illustration"
               width={1254}
               height={1254}

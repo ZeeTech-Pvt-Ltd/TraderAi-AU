@@ -1,7 +1,7 @@
 export default function HeroDashboard() {
   return (
     <img
-      src="/assets/img/traderimg2.png"
+      src="/assets/img/traderimg2.webp"
       alt="Trader AI market analysis and trading illustration"
       width={1254}
       height={1254}

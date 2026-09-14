@@ -100,7 +100,7 @@ export default function RegisterForm() {
     <form
       onSubmit={onSubmit}
       noValidate
-      className="rounded-2xl border border-line bg-white p-7 shadow-[0_4px_14px_rgba(10,22,38,0.08),0_12px_32px_rgba(10,22,38,0.07)] md:p-8"
+      className="min-w-0 rounded-2xl border border-line bg-white p-7 shadow-[0_4px_14px_rgba(10,22,38,0.08),0_12px_32px_rgba(10,22,38,0.07)] md:p-8"
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <div>

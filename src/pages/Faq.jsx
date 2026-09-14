@@ -1,7 +1,6 @@
 import Container from '../components/Container';
 import SectionHead from '../components/SectionHead';
 import Reveal from '../components/Reveal';
-import PageHero from '../components/PageHero';
 import CtaBand from '../components/CtaBand';
 import FaqList from '../components/FaqList';
 
@@ -121,11 +120,33 @@ const groups = [
 export default function Faq() {
   return (
     <>
-      <PageHero
-        crumb="FAQ"
-        title="Frequently Asked Questions"
-        lead="Clear, honest answers to the questions Australian users ask most about Trader AI, AI trading and market research."
-      />
+      <section
+        className="relative flex min-h-[480px] items-center overflow-hidden border-b border-white/10 bg-navy-900 text-ondark"
+        style={{
+          backgroundImage: 'radial-gradient(900px 400px at 80% -10%, rgba(23,105,224,0.22), transparent 60%)',
+        }}
+      >
+        <Container>
+          <div className="grid w-full items-center gap-10 lg:grid-cols-2 lg:gap-14">
+            <div>
+              <h1 className="text-4xl text-ondark md:text-5xl">Frequently Asked Questions</h1>
+              <p className="mt-4 max-w-[46ch] text-lg text-ondark-muted">
+                Clear, honest answers to the questions Australian users ask most about Trader AI,
+                AI trading and market research.
+              </p>
+            </div>
+            <img
+              src="/assets/img/faq-illustration.png"
+              alt="FAQ illustration with question mark and help icons"
+              width={1120}
+              height={840}
+              loading="eager"
+              decoding="async"
+              className="mx-auto max-h-[360px] w-full object-contain"
+            />
+          </div>
+        </Container>
+      </section>
 
       {groups.map((g, i) => (
         <section key={g.title} className={`py-16 md:py-24 ${i % 2 === 1 ? 'bg-soft' : ''}`}>

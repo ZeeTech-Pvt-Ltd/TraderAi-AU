@@ -10,7 +10,6 @@ import { ValueCard, FeatureCard } from '../components/cards';
 import {
   Activity,
   ClipboardList,
-  Clock,
   ShieldCheck,
   TrendingUp,
 } from 'lucide-react';
@@ -84,22 +83,35 @@ export default function Review() {
       {/* What Is Trader AI */}
       <section className="py-16 md:py-24">
         <Container>
-          <Reveal>
-            <SectionHead eyebrow="The Overview" title="What Is Trader AI?" align="left" className="mb-6" />
-          </Reveal>
-          <Reveal>
-            <div className="max-w-3xl space-y-4 text-ink-500">
-              <p>
-                Trader AI is an AI assisted platform designed to help you research and understand
-                financial markets. It brings market information together, highlights possible
-                patterns and trends, and presents everything in plain, clear language.
-              </p>
-              <p>
-                It is not a broker, and it does not trade your money on your behalf. It is a research
-                and analysis tool. Your decisions, and the risk that comes with them, stay with you.
-              </p>
-            </div>
-          </Reveal>
+          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+            <Reveal>
+              <img
+                src="/assets/img/review-what-is.png"
+                alt="AI trading platform illustration"
+                width={1120}
+                height={604}
+                loading="lazy"
+                decoding="async"
+                className="mx-auto max-h-[300px] w-full object-contain"
+              />
+            </Reveal>
+            <Reveal>
+              <div>
+                <SectionHead eyebrow="The Overview" title="What Is Trader AI?" align="left" className="mb-4" />
+                <div className="space-y-4 text-ink-500">
+                  <p>
+                    Trader AI is an AI assisted platform designed to help you research and understand
+                    financial markets. It brings market information together, highlights possible
+                    patterns and trends, and presents everything in plain, clear language.
+                  </p>
+                  <p>
+                    It is not a broker, and it does not trade your money on your behalf. It is a research
+                    and analysis tool. Your decisions, and the risk that comes with them, stay with you.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </Container>
       </section>
 
@@ -183,10 +195,15 @@ export default function Review() {
               </div>
             </Reveal>
             <Reveal>
-              <ValueCard icon={Clock} tone="accent" title="Built Around Research">
-                Trader AI is designed to support the habit of doing your homework, not replace it. If
-                you like to understand before you act, it's likely to feel like a good fit.
-              </ValueCard>
+              <img
+                src="/assets/img/review-who-for.png"
+                alt="Illustration of who Trader AI is suitable for"
+                width={1120}
+                height={672}
+                loading="lazy"
+                decoding="async"
+                className="mx-auto max-h-[300px] w-full object-contain"
+              />
             </Reveal>
           </div>
         </Container>
@@ -213,32 +230,43 @@ export default function Review() {
       {/* Things To Consider */}
       <section className="bg-soft py-16 md:py-24">
         <Container>
-          <Reveal>
-            <SectionHead eyebrow="Be Realistic" title="Things To Consider" align="left" className="mb-6" />
-          </Reveal>
-          <Reveal>
-            <div className="max-w-3xl">
-              <p className="mb-4 text-ink-500">Before you get started, it's worth keeping a few things in mind.</p>
-              <ul className="space-y-2 text-ink-500">
-                <li>
-                  <strong className="text-ink-900">AI insights are possibilities, not certainties.</strong>{' '}
-                  Signals and patterns can be wrong.
-                </li>
-                <li>
-                  <strong className="text-ink-900">Markets are unpredictable.</strong> Unexpected events can
-                  move prices in ways no model can anticipate.
-                </li>
-                <li>
-                  <strong className="text-ink-900">You stay responsible.</strong> The platform provides
-                  information. You make every decision.
-                </li>
-                <li>
-                  <strong className="text-ink-900">No tool can guarantee returns.</strong> Anyone who
-                  promises otherwise should be treated with caution.
-                </li>
-              </ul>
-            </div>
-          </Reveal>
+          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+            <Reveal>
+              <img
+                src="/assets/img/review-consider.png"
+                alt="Things to consider before trading illustration"
+                width={1120}
+                height={604}
+                loading="lazy"
+                decoding="async"
+                className="mx-auto max-h-[300px] w-full object-contain"
+              />
+            </Reveal>
+            <Reveal>
+              <div>
+                <SectionHead eyebrow="Be Realistic" title="Things To Consider" align="left" className="mb-4" />
+                <p className="mb-4 text-ink-500">Before you get started, it's worth keeping a few things in mind.</p>
+                <ul className="space-y-2 text-ink-500">
+                  <li>
+                    <strong className="text-ink-900">AI insights are possibilities, not certainties.</strong>{' '}
+                    Signals and patterns can be wrong.
+                  </li>
+                  <li>
+                    <strong className="text-ink-900">Markets are unpredictable.</strong> Unexpected events can
+                    move prices in ways no model can anticipate.
+                  </li>
+                  <li>
+                    <strong className="text-ink-900">You stay responsible.</strong> The platform provides
+                    information. You make every decision.
+                  </li>
+                  <li>
+                    <strong className="text-ink-900">No tool can guarantee returns.</strong> Anyone who
+                    promises otherwise should be treated with caution.
+                  </li>
+                </ul>
+              </div>
+            </Reveal>
+          </div>
         </Container>
       </section>
 
@@ -261,6 +289,17 @@ export default function Review() {
                   </p>
                 </div>
               </div>
+            </Reveal>
+            <Reveal>
+              <img
+                src="/assets/img/review-risk.png"
+                alt="AI trading risk illustration"
+                width={1120}
+                height={604}
+                loading="lazy"
+                decoding="async"
+                className="mx-auto max-h-[300px] w-full object-contain"
+              />
             </Reveal>
           </div>
         </Container>
