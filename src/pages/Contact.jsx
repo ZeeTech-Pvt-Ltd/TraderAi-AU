@@ -6,22 +6,21 @@ export default function Contact() {
   return (
     <>
       <section
-        className="border-b border-white/10 bg-navy-900 text-ondark"
+        className="relative overflow-hidden border-b border-white/10 bg-navy-900 text-ondark"
         style={{
           backgroundImage:
             'radial-gradient(900px 400px at 80% -10%, rgba(23,105,224,0.22), transparent 60%), radial-gradient(700px 360px at 5% 110%, rgba(15,167,158,0.16), transparent 55%)',
         }}
       >
-        <Container>
+        <img
+          src="/assets/img/hero-decor.png"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+        />
+        <Container className="relative">
           <div className="grid items-center gap-10 py-14 md:py-20 lg:grid-cols-2 lg:gap-14">
             <div>
-              <nav className="mb-4 text-sm text-ondark-muted" aria-label="Breadcrumb">
-                <a href="/" className="text-ondark-muted no-underline hover:text-ondark">
-                  Home
-                </a>
-                <span className="mx-1.5 opacity-60">/</span>
-                <span aria-current="page">Contact</span>
-              </nav>
               <h1 className="text-4xl text-ondark md:text-5xl">Get Started With Trader AI</h1>
               <p className="mt-4 max-w-[46ch] text-lg text-ondark-muted">
                 Enter your details below and our team will be in touch with the next steps to access

@@ -96,13 +96,6 @@ export default function AiTrading() {
         <Container>
           <div className="grid items-center gap-10 py-14 md:py-20 lg:grid-cols-2 lg:gap-14">
             <div>
-              <nav className="mb-4 text-sm text-ondark-muted" aria-label="Breadcrumb">
-                <a href="/" className="text-ondark-muted no-underline hover:text-ondark">
-                  Home
-                </a>
-                <span className="mx-1.5 opacity-60">/</span>
-                <span aria-current="page">AI Trading</span>
-              </nav>
               <h1 className="text-4xl text-ondark md:text-5xl">AI Trading</h1>
               <p className="mt-4 max-w-[46ch] text-lg text-ondark-muted">
                 AI trading uses technology to help you research markets faster, spot possible
