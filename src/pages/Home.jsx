@@ -2,7 +2,6 @@ import Container from '../components/Container';
 import Button from '../components/Button';
 import SectionHead from '../components/SectionHead';
 import Reveal from '../components/Reveal';
-import Callout from '../components/Callout';
 import CtaBand from '../components/CtaBand';
 import FaqList from '../components/FaqList';
 import HeroDashboard from '../components/HeroDashboard';
@@ -477,26 +476,6 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* 13. Disclaimer */}
-      <section className="bg-soft py-12">
-        <Container>
-          <Reveal>
-            <Callout variant="caution">
-              <p>
-                <strong className="text-ink-900">Risk Disclaimer.</strong> Trading and investing
-                involve risk, including the possible loss of the money you put in. Past performance
-                does not guarantee future results. AI generated information is not guaranteed
-                financial advice. You should do your own research, consider your own financial
-                circumstances, and seek professional advice where appropriate. Read our full{' '}
-                <a href="/risk-disclaimer/" className="text-primary underline-offset-2">
-                  Risk Disclaimer
-                </a>
-                .
-              </p>
-            </Callout>
-          </Reveal>
-        </Container>
-      </section>
     </>
   );
 }

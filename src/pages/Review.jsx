@@ -3,7 +3,6 @@ import Button from '../components/Button';
 import SectionHead from '../components/SectionHead';
 import Reveal from '../components/Reveal';
 import PageHero from '../components/PageHero';
-import Callout from '../components/Callout';
 import CtaBand from '../components/CtaBand';
 import FaqList from '../components/FaqList';
 import ProsCons from '../components/ProsCons';
@@ -220,17 +219,6 @@ export default function Review() {
               </ul>
             </div>
           </Reveal>
-          <Reveal>
-            <div className="mt-7 max-w-3xl">
-              <Callout variant="caution">
-                <p>
-                  <strong className="text-ink-900">This is not financial advice.</strong> Always do your
-                  own research and consider seeking professional advice before making any financial
-                  decision.
-                </p>
-              </Callout>
-            </div>
-          </Reveal>
         </Container>
       </section>
 
@@ -253,15 +241,6 @@ export default function Review() {
                   </p>
                 </div>
               </div>
-            </Reveal>
-            <Reveal>
-              <Callout variant="caution">
-                <p>
-                  <strong className="text-ink-900">Risk is real.</strong> Trading and investing involve
-                  risk, including the possible loss of the money you put in. Past performance does not
-                  guarantee future results.
-                </p>
-              </Callout>
             </Reveal>
           </div>
         </Container>

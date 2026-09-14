@@ -3,7 +3,6 @@ import Button from '../components/Button';
 import SectionHead from '../components/SectionHead';
 import Reveal from '../components/Reveal';
 import PageHero from '../components/PageHero';
-import Callout from '../components/Callout';
 import CtaBand from '../components/CtaBand';
 import ProcessFlow from '../components/ProcessFlow';
 import Steps from '../components/Steps';
@@ -75,17 +74,6 @@ export default function HowItWorks() {
           </Reveal>
           <Reveal>
             <Steps items={journey} />
-          </Reveal>
-          <Reveal>
-            <div className="mt-8">
-              <Callout variant="caution">
-                <p>
-                  <strong className="text-ink-900">You're in charge at every step.</strong> Trader AI
-                  provides information and analysis. The final decision, and the risk that comes with
-                  it, always belongs to you.
-                </p>
-              </Callout>
-            </div>
           </Reveal>
         </Container>
       </section>
