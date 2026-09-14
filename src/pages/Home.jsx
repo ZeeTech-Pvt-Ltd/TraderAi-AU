@@ -264,16 +264,6 @@ export default function Home() {
           <Reveal>
             <Steps items={steps} />
           </Reveal>
-          <Reveal>
-            <div className="mt-8">
-              <Callout variant="caution">
-                <p>
-                  <strong className="text-ink-900">AI tools provide information and analysis.</strong>{' '}
-                  You remain responsible for your own decisions, and trading always involves risk.
-                </p>
-              </Callout>
-            </div>
-          </Reveal>
         </Container>
       </section>
 
@@ -350,14 +340,6 @@ export default function Home() {
                   decoding="async"
                   className="h-auto w-full"
                 />
-                <div className="mt-4">
-                  <Callout variant="caution">
-                    <p>
-                      <strong className="text-ink-900">No certainties here.</strong> AI can assist
-                      with analysis, but it can't predict the market. Every trade carries risk.
-                    </p>
-                  </Callout>
-                </div>
               </div>
             </Reveal>
           </div>
@@ -460,15 +442,6 @@ export default function Home() {
                   decoding="async"
                   className="h-auto w-full"
                 />
-                <div className="mt-4">
-                  <Callout variant="caution">
-                    <p>
-                      <strong className="text-ink-900">Trader AI is an informational platform.</strong>{' '}
-                      It is not a licensed financial adviser, and nothing on this website is
-                      personal financial advice. Always consider your own circumstances.
-                    </p>
-                  </Callout>
-                </div>
               </div>
             </Reveal>
           </div>
