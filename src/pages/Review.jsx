@@ -2,7 +2,6 @@ import Container from '../components/Container';
 import Button from '../components/Button';
 import SectionHead from '../components/SectionHead';
 import Reveal from '../components/Reveal';
-import PageHero from '../components/PageHero';
 import CtaBand from '../components/CtaBand';
 import FaqList from '../components/FaqList';
 import ProsCons from '../components/ProsCons';
@@ -51,15 +50,36 @@ const faqs = [
 export default function Review() {
   return (
     <>
-      <PageHero
-        crumb="Trader AI Review Australia"
-        title="Trader AI Review Australia"
-        lead="A straightforward look at Trader AI for Australian users. What the platform does, how it works, who it's for, and the things worth thinking about before you start."
+      <section
+        className="relative flex min-h-[480px] items-center overflow-hidden border-b border-white/10 bg-navy-900 text-ondark"
+        style={{
+          backgroundImage: 'radial-gradient(900px 400px at 80% -10%, rgba(23,105,224,0.22), transparent 60%)',
+        }}
       >
-        <p className="mt-5 text-sm text-ondark-muted">
-          This is an informational review, not personal financial advice.
-        </p>
-      </PageHero>
+        <Container>
+          <div className="grid w-full items-center gap-10 lg:grid-cols-2 lg:gap-14">
+            <div>
+              <h1 className="text-4xl text-ondark md:text-5xl">Trader AI Review Australia</h1>
+              <p className="mt-4 max-w-[46ch] text-lg text-ondark-muted">
+                A straightforward look at Trader AI for Australian users. What the platform does,
+                how it works, who it's for, and the things worth thinking about before you start.
+              </p>
+              <p className="mt-5 text-sm text-ondark-muted">
+                This is an informational review, not personal financial advice.
+              </p>
+            </div>
+            <img
+              src="/assets/img/image7.webp"
+              alt="Trader AI review illustration"
+              width={1272}
+              height={1236}
+              loading="eager"
+              decoding="async"
+              className="mx-auto max-h-[360px] w-full object-contain"
+            />
+          </div>
+        </Container>
+      </section>
 
       {/* What Is Trader AI */}
       <section className="py-16 md:py-24">

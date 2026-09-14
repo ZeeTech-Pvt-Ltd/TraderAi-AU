@@ -3,7 +3,7 @@ import Container from './Container';
 export default function PageHero({ title, lead, children }) {
   return (
     <section
-      className="border-b border-white/10 bg-navy-900 py-14 md:py-20"
+      className="flex min-h-[480px] items-center border-b border-white/10 bg-navy-900"
       style={{
         backgroundImage: 'radial-gradient(900px 400px at 80% -10%, rgba(23,105,224,0.2), transparent 60%)',
       }}

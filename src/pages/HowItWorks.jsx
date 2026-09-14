@@ -33,13 +33,13 @@ export default function HowItWorks() {
   return (
     <>
       <section
-        className="relative overflow-hidden border-b border-white/10 bg-navy-900 text-ondark"
+        className="relative flex min-h-[480px] items-center overflow-hidden border-b border-white/10 bg-navy-900 text-ondark"
         style={{
           backgroundImage: 'radial-gradient(900px 400px at 80% -10%, rgba(23,105,224,0.22), transparent 60%)',
         }}
       >
         <Container>
-          <div className="grid items-center gap-10 py-14 md:py-20 lg:grid-cols-2 lg:gap-14">
+          <div className="grid w-full items-center gap-10 lg:grid-cols-2 lg:gap-14">
             <div>
               <h1 className="text-4xl text-ondark md:text-5xl">How Trader AI Works</h1>
               <p className="mt-4 max-w-[46ch] text-lg text-ondark-muted">
@@ -60,7 +60,7 @@ export default function HowItWorks() {
               height={1403}
               loading="eager"
               decoding="async"
-              className="mx-auto h-auto w-full max-w-[360px]"
+              className="mx-auto max-h-[360px] w-full object-contain"
             />
           </div>
         </Container>

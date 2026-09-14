@@ -88,13 +88,13 @@ export default function AiTrading() {
   return (
     <>
       <section
-        className="border-b border-white/10 bg-navy-900 text-ondark"
+        className="flex min-h-[480px] items-center border-b border-white/10 bg-navy-900 text-ondark"
         style={{
           backgroundImage: 'radial-gradient(900px 400px at 80% -10%, rgba(23,105,224,0.2), transparent 60%)',
         }}
       >
         <Container>
-          <div className="grid items-center gap-10 py-14 md:py-20 lg:grid-cols-2 lg:gap-14">
+          <div className="grid w-full items-center gap-10 lg:grid-cols-2 lg:gap-14">
             <div>
               <h1 className="text-4xl text-ondark md:text-5xl">AI Trading</h1>
               <p className="mt-4 max-w-[46ch] text-lg text-ondark-muted">
@@ -116,7 +116,7 @@ export default function AiTrading() {
               height={1254}
               loading="eager"
               decoding="async"
-              className="h-auto w-full"
+              className="max-h-[360px] w-full object-contain"
             />
           </div>
         </Container>
