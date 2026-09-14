@@ -131,7 +131,7 @@ export default function Faq() {
         <section key={g.title} className={`py-16 md:py-24 ${i % 2 === 1 ? 'bg-soft' : ''}`}>
           <Container>
             <Reveal>
-              <SectionHead eyebrow={g.eyebrow} title={g.title} align="left" className="mb-8" />
+              <SectionHead eyebrow={g.eyebrow} title={g.title} align="center" className="mb-8" />
             </Reveal>
             <Reveal>
               <FaqList items={g.items} />
