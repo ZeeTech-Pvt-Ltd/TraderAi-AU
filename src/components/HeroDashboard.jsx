@@ -8,7 +8,7 @@ export default function HeroDashboard() {
       loading="eager"
       decoding="async"
       fetchPriority="high"
-      className="h-auto w-full max-w-[520px]"
+      className="h-auto w-full max-w-[485px]"
     />
   );
 }
