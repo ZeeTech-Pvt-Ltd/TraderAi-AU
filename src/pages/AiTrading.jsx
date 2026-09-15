@@ -112,8 +112,8 @@ export default function AiTrading() {
             <img
               src="/assets/img/traderimg1.webp"
               alt="AI trading platform illustration"
-              width={1254}
-              height={1254}
+              width={640}
+              height={640}
               loading="eager"
               decoding="async"
               className="max-h-[360px] w-full object-contain"

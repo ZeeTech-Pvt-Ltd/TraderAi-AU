@@ -235,8 +235,8 @@ export default function Home() {
               <img
                 src="/assets/img/img-1.webp"
                 alt="Trader AI platform illustration"
-                width={1274}
-                height={1234}
+                width={640}
+                height={620}
                 loading="lazy"
                 decoding="async"
                 className="h-auto w-full"
@@ -329,8 +329,8 @@ export default function Home() {
                 <img
                   src="/assets/img/img-2.webp"
                   alt="AI trading tools illustration"
-                  width={1277}
-                  height={1231}
+                  width={640}
+                  height={617}
                   loading="lazy"
                   decoding="async"
                   className="h-auto w-full"
@@ -431,8 +431,8 @@ export default function Home() {
                 <img
                   src="/assets/img/img-3.webp"
                   alt="Australian market analysis illustration"
-                  width={1277}
-                  height={1231}
+                  width={640}
+                  height={617}
                   loading="lazy"
                   decoding="async"
                   className="h-auto w-full"

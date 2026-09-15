@@ -70,8 +70,8 @@ export default function Review() {
             <img
               src="/assets/img/image7.webp"
               alt="Trader AI review illustration"
-              width={1272}
-              height={1236}
+              width={640}
+              height={622}
               loading="eager"
               decoding="async"
               className="mx-auto max-h-[360px] w-full object-contain"
@@ -88,8 +88,8 @@ export default function Review() {
               <img
                 src="/assets/img/review-what-is.webp"
                 alt="AI trading platform illustration"
-                width={1120}
-                height={604}
+                width={600}
+                height={324}
                 loading="lazy"
                 decoding="async"
                 className="mx-auto max-h-[300px] w-full object-contain"
@@ -198,8 +198,8 @@ export default function Review() {
               <img
                 src="/assets/img/review-who-for.webp"
                 alt="Illustration of who Trader AI is suitable for"
-                width={1120}
-                height={672}
+                width={600}
+                height={360}
                 loading="lazy"
                 decoding="async"
                 className="mx-auto max-h-[300px] w-full object-contain"
@@ -235,8 +235,8 @@ export default function Review() {
               <img
                 src="/assets/img/review-consider.webp"
                 alt="Things to consider before trading illustration"
-                width={1120}
-                height={604}
+                width={600}
+                height={324}
                 loading="lazy"
                 decoding="async"
                 className="mx-auto max-h-[300px] w-full object-contain"
@@ -294,8 +294,8 @@ export default function Review() {
               <img
                 src="/assets/img/review-risk.webp"
                 alt="AI trading risk illustration"
-                width={1120}
-                height={604}
+                width={600}
+                height={324}
                 loading="lazy"
                 decoding="async"
                 className="mx-auto max-h-[300px] w-full object-contain"

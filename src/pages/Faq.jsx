@@ -138,8 +138,8 @@ export default function Faq() {
             <img
               src="/assets/img/faq-illustration.webp"
               alt="FAQ illustration with question mark and help icons"
-              width={1120}
-              height={840}
+              width={720}
+              height={540}
               loading="eager"
               decoding="async"
               className="mx-auto max-h-[360px] w-full object-contain"

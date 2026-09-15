@@ -68,8 +68,8 @@ export default function Features() {
             <img
               src="/assets/img/images4.webp"
               alt="Trader AI trading features illustration"
-              width={1277}
-              height={1231}
+              width={640}
+              height={617}
               loading="eager"
               decoding="async"
               className="max-h-[360px] w-full object-contain"

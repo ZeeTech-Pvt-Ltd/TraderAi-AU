@@ -56,8 +56,8 @@ export default function HowItWorks() {
             <img
               src="/assets/img/image5.webp"
               alt="Trader AI platform illustration"
-              width={1121}
-              height={1403}
+              width={580}
+              height={726}
               loading="eager"
               decoding="async"
               className="mx-auto max-h-[360px] w-full object-contain"
