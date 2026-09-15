@@ -30,9 +30,9 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <h4 className="mb-4 font-display text-xs font-semibold uppercase tracking-wider text-ondark">
+            <div className="mb-4 font-display text-xs font-semibold uppercase tracking-wider text-ondark">
               Explore
-            </h4>
+            </div>
             <ul className="space-y-2.5">
               {explore.map((i) => (
                 <li key={i.href}>
@@ -44,9 +44,9 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="mb-4 font-display text-xs font-semibold uppercase tracking-wider text-ondark">
+            <div className="mb-4 font-display text-xs font-semibold uppercase tracking-wider text-ondark">
               Legal
-            </h4>
+            </div>
             <ul className="space-y-2.5">
               {legal.map((i) => (
                 <li key={i.href}>

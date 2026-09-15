@@ -22,7 +22,7 @@ export default function Contact() {
               </p>
             </div>
             <img
-              src="/assets/img/contact-illustration.png"
+              src="/assets/img/contact-illustration.webp"
               alt="Contact support illustration with email, phone and chat icons"
               width={1120}
               height={840}

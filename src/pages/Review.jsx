@@ -86,7 +86,7 @@ export default function Review() {
           <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
             <Reveal>
               <img
-                src="/assets/img/review-what-is.png"
+                src="/assets/img/review-what-is.webp"
                 alt="AI trading platform illustration"
                 width={1120}
                 height={604}
@@ -196,7 +196,7 @@ export default function Review() {
             </Reveal>
             <Reveal>
               <img
-                src="/assets/img/review-who-for.png"
+                src="/assets/img/review-who-for.webp"
                 alt="Illustration of who Trader AI is suitable for"
                 width={1120}
                 height={672}
@@ -233,7 +233,7 @@ export default function Review() {
           <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
             <Reveal>
               <img
-                src="/assets/img/review-consider.png"
+                src="/assets/img/review-consider.webp"
                 alt="Things to consider before trading illustration"
                 width={1120}
                 height={604}
@@ -292,7 +292,7 @@ export default function Review() {
             </Reveal>
             <Reveal>
               <img
-                src="/assets/img/review-risk.png"
+                src="/assets/img/review-risk.webp"
                 alt="AI trading risk illustration"
                 width={1120}
                 height={604}

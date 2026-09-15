@@ -136,7 +136,7 @@ export default function Faq() {
               </p>
             </div>
             <img
-              src="/assets/img/faq-illustration.png"
+              src="/assets/img/faq-illustration.webp"
               alt="FAQ illustration with question mark and help icons"
               width={1120}
               height={840}
