@@ -1,4 +1,7 @@
+'use client';
+
 import { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 import { ChevronDown, Search } from 'lucide-react';
 import { COUNTRIES, composePhone, detectCountry, dialCodeOf, flagUrl } from '../data/phone';
 
@@ -257,13 +260,13 @@ export default function RegisterForm() {
 
       <p className="mt-4 text-xs text-ink-500">
         By signing up, you agree to our{' '}
-        <a href="/terms-and-conditions/" className="text-primary underline-offset-2">
+        <Link href="/terms-and-conditions/" className="text-primary underline-offset-2">
           Terms And Conditions
-        </a>{' '}
+        </Link>{' '}
         and{' '}
-        <a href="/privacy-policy/" className="text-primary underline-offset-2">
+        <Link href="/privacy-policy/" className="text-primary underline-offset-2">
           Privacy Policy
-        </a>
+        </Link>
         .
       </p>
     </form>

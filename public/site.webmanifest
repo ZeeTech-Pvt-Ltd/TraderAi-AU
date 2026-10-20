@@ -1,0 +1,21 @@
+{
+  "name": "Trader AI",
+  "short_name": "Trader AI",
+  "description": "AI assisted tools for market analysis, pattern recognition and trading research.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a1626",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ]
+}

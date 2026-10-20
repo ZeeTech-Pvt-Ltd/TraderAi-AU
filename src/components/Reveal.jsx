@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useRef, useState } from 'react';
 
 export default function Reveal({ as: Tag = 'div', className = '', delay = 0, children }) {

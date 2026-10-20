@@ -1,4 +1,8 @@
+'use client';
+
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import Brand from './Brand';
 
@@ -11,7 +15,12 @@ const NAV = [
   { label: 'FAQ', href: '/faq/', key: 'faq' },
 ];
 
-export default function Header({ active }) {
+const samePath = (href, pathname) =>
+  href === '/' ? pathname === '/' : pathname === href || pathname === href.replace(/\/$/, '');
+
+export default function Header() {
+  const pathname = usePathname();
+  const active = NAV.find((item) => samePath(item.href, pathname))?.key;
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -50,7 +59,7 @@ export default function Header({ active }) {
           <ul className="flex items-center gap-0.5">
             {NAV.map((item) => (
               <li key={item.key}>
-                <a
+                <Link
                   href={item.href}
                   aria-current={active === item.key ? 'page' : undefined}
                   className={`inline-flex items-center rounded-lg px-3 py-2 text-sm font-medium no-underline transition-colors ${
@@ -60,16 +69,16 @@ export default function Header({ active }) {
                   }`}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
-          <a
+          <Link
             href="/register/"
             className="ml-2 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-primary px-4 py-2 font-display text-sm font-semibold text-white no-underline transition-colors hover:bg-primary-600"
           >
             Get Started
-          </a>
+          </Link>
         </nav>
 
         <button
@@ -90,7 +99,7 @@ export default function Header({ active }) {
             <ul className="flex flex-col">
               {NAV.map((item) => (
                 <li key={item.key}>
-                  <a
+                  <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
                     className={`block rounded-lg px-3 py-3 text-base font-medium no-underline ${
@@ -100,17 +109,17 @@ export default function Header({ active }) {
                     }`}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
-            <a
+            <Link
               href="/register/"
               onClick={() => setOpen(false)}
               className="mt-3 block rounded-full bg-primary px-5 py-3 text-center font-display text-base font-semibold text-white no-underline"
             >
               Get Started
-            </a>
+            </Link>
           </nav>
         </div>
       )}

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 const variants = {
@@ -34,6 +35,15 @@ export default function Button({
   );
 
   if (href) {
+    // Internal routes go through Link so navigation is client-side; anything
+    // else stays a plain anchor.
+    if (href.startsWith('/') && !href.startsWith('//')) {
+      return (
+        <Link href={href} className={cls} {...rest}>
+          {inner}
+        </Link>
+      );
+    }
     return (
       <a href={href} className={cls} {...rest}>
         {inner}

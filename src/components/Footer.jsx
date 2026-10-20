@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Brand from './Brand';
 
 const explore = [
@@ -36,9 +37,9 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {explore.map((i) => (
                 <li key={i.href}>
-                  <a href={i.href} className="text-sm text-ondark-muted no-underline hover:text-ondark hover:underline">
+                  <Link href={i.href} className="text-sm text-ondark-muted no-underline hover:text-ondark hover:underline">
                     {i.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -50,9 +51,9 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {legal.map((i) => (
                 <li key={i.href}>
-                  <a href={i.href} className="text-sm text-ondark-muted no-underline hover:text-ondark hover:underline">
+                  <Link href={i.href} className="text-sm text-ondark-muted no-underline hover:text-ondark hover:underline">
                     {i.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -67,7 +68,9 @@ export default function Footer() {
             your own research and consider seeking professional advice before making any financial
             decision.
           </p>
-          <p className="shrink-0 text-xs">© {year} Trader AI. All rights reserved.</p>
+          <p className="shrink-0 text-xs" suppressHydrationWarning>
+            © {year} Trader AI. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
