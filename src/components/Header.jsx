@@ -8,6 +8,7 @@ import Brand from './Brand';
 
 const NAV = [
   { label: 'Home', href: '/', key: 'home' },
+  { label: 'About', href: '/about/', key: 'about' },
   { label: 'AI Trading', href: '/ai-trading/', key: 'ai-trading' },
   { label: 'Features', href: '/features/', key: 'features' },
   { label: 'How It Works', href: '/how-it-works/', key: 'how-it-works' },

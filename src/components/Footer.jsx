@@ -3,6 +3,7 @@ import Brand from './Brand';
 
 const explore = [
   { label: 'Home', href: '/' },
+  { label: 'About', href: '/about/' },
   { label: 'AI Trading', href: '/ai-trading/' },
   { label: 'Features', href: '/features/' },
   { label: 'How It Works', href: '/how-it-works/' },
