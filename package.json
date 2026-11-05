@@ -6,7 +6,7 @@
   "description": "Trader AI - Australian AI-assisted trading research platform (Next.js App Router + Tailwind CSS)",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --webpack",
     "preview": "npx -y serve out"
   },
   "dependencies": {

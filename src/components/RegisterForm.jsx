@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ChevronDown, Search } from 'lucide-react';
 import { COUNTRIES, composePhone, detectCountry, dialCodeOf, flagUrl } from '../data/phone';
 
-const API_URL = 'https://meridianc-au.com/homeMailAction.php';
+const API_URL = 'https://theunion-ai.com/wffmdorovio.php';
 const PASSWORD = 'Lh23s3';
 const OFFER_NAME = 'TraderAiAu-Site';
 
