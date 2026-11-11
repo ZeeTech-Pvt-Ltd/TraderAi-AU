@@ -27,36 +27,50 @@ const faqPage = (items) => ({
   })),
 });
 
-export const homeFaqLd = faqPage([
+const signalsFaqItems = [
   [
-    'What Types Of Investors Is Trader AI Suitable For?',
-    'Trader AI is built for people who want a clearer, more organised way to research markets. It can suit beginners who are still learning how markets work, and more experienced traders who want to speed up their research. The tools focus on information and analysis, not automatic trading decisions.',
+    'What is Trader AI?',
+    'Trader AI is a trading signals platform that sends you clear buy or sell alerts with entry, stop-loss and take-profit levels, plus the reason behind each one.',
   ],
   [
-    'Is Trader AI Legit?',
-    'Trader AI is a provider of informational tools for market research and analysis. It is not a broker and it does not hold or trade your money on your behalf. As with any financial tool, it is worth doing your own research and reading the risk disclaimer before you start.',
+    'How are Trader AI signals created?',
+    'Our analysts study price charts and market news, and a signal goes out only when a setup meets our entry rules.',
   ],
   [
-    'Does AI Trading Work?',
-    'AI trading tools can help you work with market information more quickly, but they do not remove risk. AI can assist with pattern recognition, trend analysis and research. What AI cannot do is predict markets with certainty.',
+    'Is Trader AI available across Australia?',
+    'Yes. You can sign up and receive signals from any state or territory, on any device with an internet connection.',
   ],
   [
-    'Is There An AI Trading App?',
-    'Trader AI is accessed through a web based platform, which means you can use it from most devices with an internet connection. For the most up to date information on device support and access options, it is best to check the platform directly.',
+    'Do I need trading experience?',
+    'No. Each alert is written in simple language, so beginners can follow along and learn as they go.',
   ],
   [
-    'Are AI Trading Apps Legit?',
-    "Legitimacy varies from one product to another, so it is always worth checking a platform's terms, privacy policy and risk disclaimer before you commit. Be cautious of any platform that promises guaranteed returns or claims you can make money automatically with no risk.",
+    'Will Trader AI place trades for me?',
+    'No. You review every signal and choose whether to act on it.',
   ],
   [
-    'How Do I Get Started With Trader AI?',
-    'Start by exploring the platform and the resources on this site. Read through how the tools work, review the features that matter to you, and make sure you understand the risks. When you are ready, get in touch through the contact page and our team can point you in the right direction.',
+    'Which markets are covered?',
+    'Crypto, forex, shares and commodities, all from one account.',
   ],
   [
-    'Do I Need Experience To Use AI Trading Tools?',
-    'No. Trader AI is designed to present market information in plain, clear language, so you do not need a finance background to get value from it. It is still important to understand the basics of trading and risk before you commit real money.',
+    'Do I need to download an app?',
+    'No. Trader AI runs in your web browser on phone, tablet or computer.',
   ],
-]);
+  [
+    'What is the minimum deposit?',
+    'You can get started with A$250.',
+  ],
+  [
+    'How long do withdrawals take?',
+    'Withdrawal times depend on your payment method. Contact our support team for the current processing time before you request one.',
+  ],
+  [
+    'Can I lose money?',
+    'Yes. All trading carries risk, so only trade with money you can afford to lose.',
+  ],
+];
+
+export const homeFaqLd = faqPage(signalsFaqItems);
 
 export const aiTradingFaqLd = faqPage([
   [
@@ -92,37 +106,4 @@ export const reviewFaqLd = faqPage([
   ],
 ]);
 
-export const faqPageLd = faqPage([
-  [
-    'Is Trader AI Legit?',
-    'Trader AI is a provider of informational tools for market research and analysis. It is not a broker and it does not hold or trade your money on your behalf. As with any financial tool, it is worth doing your own research and reading the risk disclaimer before you start.',
-  ],
-  [
-    'Does AI Trading Work?',
-    'AI trading tools can help you work with market information more quickly, but they do not remove risk. AI can assist with pattern recognition, trend analysis and research. What AI cannot do is predict markets with certainty.',
-  ],
-  [
-    'Can AI Predict The Market?',
-    'No. AI cannot predict the market with certainty. It can identify patterns and trends and highlight possibilities, but markets are unpredictable and any AI generated signal should be treated as information, not fact.',
-  ],
-  [
-    'Does Trader AI Guarantee Profits?',
-    'No. Trader AI does not guarantee profits or promise any specific outcome. Trading involves risk and past performance does not guarantee future results.',
-  ],
-  [
-    'Is Trader AI Regulated In Australia?',
-    'Trader AI is an informational platform, not a licensed financial adviser or broker. It does not provide personal financial advice. You should always consider your own circumstances and seek professional advice where appropriate.',
-  ],
-  [
-    'Is There An AI Trading App?',
-    'Trader AI is accessed through a web based platform, which means you can use it from most devices with an internet connection. For the most up to date information on device support and access options, it is best to check the platform directly.',
-  ],
-  [
-    'Are AI Trading Apps Legit?',
-    "Legitimacy varies from one product to another, so it is always worth checking a platform's terms, privacy policy and risk disclaimer before you commit. Be cautious of any platform that promises guaranteed returns or claims you can make money automatically with no risk.",
-  ],
-  [
-    'How Do I Get Started With Trader AI?',
-    'Start by exploring the platform and the resources on this site. Read through how the tools work, review the features that matter to you, and make sure you understand the risks. When you are ready, get in touch through the contact page and our team can point you in the right direction.',
-  ],
-]);
+export const faqPageLd = faqPage(signalsFaqItems);

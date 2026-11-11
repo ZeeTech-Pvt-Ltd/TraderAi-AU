@@ -27,8 +27,8 @@ export default function Footer() {
           <div>
             <Brand />
             <p className="mt-4 max-w-xs text-sm leading-relaxed">
-              AI assisted tools designed to help you analyse markets, understand trends and make
-              more informed trading decisions.
+              Researched trade ideas with clear entry, stop-loss and take-profit levels, so you
+              know your next move before you make it.
             </p>
           </div>
           <div>
@@ -63,11 +63,10 @@ export default function Footer() {
 
         <div className="flex flex-col gap-4 border-t border-white/10 pt-7 md:flex-row md:items-start md:justify-between">
           <p className="max-w-3xl text-xs leading-relaxed">
-            Trader AI provides informational tools and market research. Trading and investing
-            involve risk, including the possible loss of capital. Nothing on this website is
-            financial advice, and past performance does not guarantee future results. Always do
-            your own research and consider seeking professional advice before making any financial
-            decision.
+            Trading involves significant risk, and you may lose some or all of your money. Trader
+            AI signals are general information only and do not take into account your personal
+            objectives, financial situation or needs. Past performance is not a reliable indicator
+            of future results.
           </p>
           <p className="shrink-0 text-xs" suppressHydrationWarning>
             © {year} Trader AI. All rights reserved.

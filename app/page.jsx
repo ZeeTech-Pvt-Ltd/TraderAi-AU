@@ -4,9 +4,9 @@ import { pageMetadata } from '@/lib/seo';
 import { homeFaqLd, organizationLd, websiteLd } from '@/lib/jsonld';
 
 export const metadata = pageMetadata({
-  title: 'Trader AI Australia | AI Trading And Market Analysis',
+  title: 'Trader AI Australia | Trading Signals Platform',
   description:
-    'Trader AI helps Australian traders analyse markets, spot patterns and track trends with AI-powered tools. Explore features and get started free today.',
+    'Trader AI sends clear buy and sell signals with entry, stop-loss and take-profit levels. See how it works and create your free account.',
   path: '/',
 });
 

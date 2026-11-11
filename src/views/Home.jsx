@@ -3,134 +3,304 @@ import Button from '../components/Button';
 import SectionHead from '../components/SectionHead';
 import Reveal from '../components/Reveal';
 import CtaBand from '../components/CtaBand';
-import FaqList from '../components/FaqList';
-import HeroDashboard from '../components/HeroDashboard';
 import Checklist from '../components/Checklist';
+import Callout from '../components/Callout';
+import HeroDashboard from '../components/HeroDashboard';
 import ProcessFlow from '../components/ProcessFlow';
 import Steps from '../components/Steps';
-import { ValueCard, FeatureCard } from '../components/cards';
+import FaqList from '../components/FaqList';
+import { ValueCard } from '../components/cards';
 import {
-  Activity,
-  BarChart3,
-  Check,
-  ClipboardList,
+  ArrowLeftRight,
+  Bell,
+  Bitcoin,
+  Briefcase,
+  Building2,
   Clock,
   Cpu,
   Database,
-  Eye,
-  FileText,
+  Gem,
+  Globe,
+  GraduationCap,
+  Headset,
+  LayoutDashboard,
   Lightbulb,
   LineChart,
-  List,
+  Lock,
+  MessageSquare,
   MousePointer2,
-  Search,
   ShieldCheck,
-  TrendingUp,
+  Star,
+  StarHalf,
+  Target,
+  Wallet,
 } from 'lucide-react';
 
-const heroNotes = [
-  'Information and analysis, not financial advice',
-  'You stay in control of your decisions',
-  'Clear risk information included',
+const signalSteps = [
+  {
+    icon: Database,
+    title: 'Market research',
+    text: 'Our analysts track price action, trend direction and economic news across every market we cover.',
+  },
+  {
+    icon: Cpu,
+    tone: 'accent',
+    title: 'Setup confirmed',
+    text: 'A signal is created only when a trade meets our entry rules and offers a sensible risk-to-reward balance.',
+  },
+  {
+    icon: Bell,
+    title: 'Alert delivered',
+    text: 'You receive the market, direction, entry, stop-loss, take-profit and a short “why” straight to your device.',
+  },
+  {
+    icon: MousePointer2,
+    tone: 'accent',
+    title: 'Your decision',
+    text: 'Take the trade as it is, adjust it to suit your strategy or let it pass.',
+  },
 ];
 
-const trustCards = [
-  { icon: LineChart, title: 'Market Analysis', text: 'Bring market information together so you can see the bigger picture without digging through endless charts.' },
-  { icon: Activity, tone: 'accent', title: 'Pattern Recognition', text: 'Spot possible patterns and setups that are easy to miss when you review markets by hand.' },
-  { icon: TrendingUp, title: 'Trend Insights', text: 'Understand the general direction of a market with clear, easy to read signals.' },
-  { icon: ShieldCheck, tone: 'accent', title: 'Risk Awareness', text: 'See potential risk factors before you act, so your decisions are more considered.' },
-  { icon: Search, title: 'Trading Research', text: 'Organise your research in one place and spend less time chasing scattered information.' },
-  { icon: FileText, tone: 'accent', title: 'Clear Information', text: 'Plain language summaries that help you understand what the data is actually telling you.' },
+const highlights = [
+  'Crypto, forex, shares and commodities in a single account',
+  'A clear reason behind every alert',
+  'Trade from your phone, tablet or laptop',
+  'Your own risk limits on every position',
 ];
 
-const steps = [
-  { title: 'Explore The Market', text: 'Look through the markets and stocks that interest you, and get comfortable with the layout.' },
-  { title: 'Analyse Market Patterns', text: "Use the platform's tools to review price patterns and market structure." },
-  { title: 'Review AI Based Insights', text: 'Read the AI assisted summaries and signals to understand what the data suggests.' },
-  { title: 'Consider Risk', text: 'Think about the downside, not just the upside, before you take any action.' },
-  { title: 'Make Your Own Decision', text: "Use everything you've learned to make a choice that suits your own goals and circumstances." },
+const whyCards = [
+  {
+    icon: MessageSquare,
+    title: 'No confusing language',
+    text: 'Every trade idea is explained in plain English, without the jargon.',
+  },
+  {
+    icon: Clock,
+    tone: 'accent',
+    title: 'Hours back in your week',
+    text: 'We handle the chart analysis, and you get the finished idea in seconds.',
+  },
+  {
+    icon: Bell,
+    title: 'Timely alerts',
+    text: 'Opportunities reach you while they are still worth acting on.',
+  },
+  {
+    icon: Headset,
+    tone: 'accent',
+    title: 'A support team that helps',
+    text: 'Real people answer your questions over live chat and email.',
+  },
+];
+
+const setupSteps = [
+  { title: 'Sign up', text: 'Enter your name, email address and mobile number.' },
+  { title: 'Verify your ID', text: 'A quick identity check protects your account and your money.' },
+  { title: 'Make a deposit', text: 'Fund your account with the payment option you prefer.' },
+  { title: 'Get your first signal', text: 'Pick your markets, set your limits and check your first alert.' },
+];
+
+const markets = [
+  {
+    icon: Bitcoin,
+    title: 'Crypto',
+    text: 'Signals on popular coins, including Bitcoin and Ethereum.',
+  },
+  {
+    icon: ArrowLeftRight,
+    tone: 'accent',
+    title: 'Forex',
+    text: 'Major currency pairs such as AUD/USD, EUR/USD and GBP/USD.',
+  },
+  {
+    icon: Building2,
+    title: 'Shares',
+    text: 'Opportunities in leading Australian companies on the ASX, alongside big global names.',
+  },
+  {
+    icon: Gem,
+    tone: 'accent',
+    title: 'Commodities',
+    text: 'Price moves in gold, silver and oil.',
+  },
 ];
 
 const features = [
   {
-    icon: Activity,
-    title: 'Pattern Recognition',
-    text: 'AI can scan price data for repeating shapes and structures that may signal a possible market setup. It helps you notice patterns you might otherwise miss, so you can decide whether they\'re worth acting on.',
-    bullets: ['Spot possible chart patterns', 'Review setups faster', 'Use patterns as a starting point'],
+    icon: Lightbulb,
+    title: 'Signals with reasons',
+    text: 'Know what to trade and the thinking behind it.',
+  },
+  {
+    icon: Target,
+    tone: 'accent',
+    title: 'A built-in exit plan',
+    text: 'Stop-loss and take-profit levels are ready before you open a position.',
+  },
+  {
+    icon: Bell,
+    title: 'Price level alerts',
+    text: 'Pick a price and get notified as soon as the market touches it.',
+  },
+  {
+    icon: LayoutDashboard,
+    tone: 'accent',
+    title: 'One-screen dashboard',
+    text: 'Your balance, open trades and results at a glance.',
+  },
+  {
+    icon: Globe,
+    title: 'No app download',
+    text: 'Log in from any browser and you are ready to trade.',
+  },
+];
+
+const audience = [
+  {
+    icon: GraduationCap,
+    title: 'Beginners',
+    text: 'Build confidence with alerts that teach you as you trade.',
+  },
+  {
+    icon: Briefcase,
+    tone: 'accent',
+    title: 'Busy Australians',
+    text: 'Fit trading around a full-time job with just a few minutes a day.',
+  },
+  {
+    icon: LineChart,
+    title: 'Experienced traders',
+    text: 'Compare our setups with your own and branch out into new markets.',
+  },
+];
+
+const security = [
+  {
+    icon: Lock,
+    title: 'Strong encryption',
+    text: 'Your personal and payment details are kept safe.',
   },
   {
     icon: ShieldCheck,
     tone: 'accent',
-    title: 'Risk Management',
-    text: 'Good trading is as much about managing downside as chasing upside. Trader AI helps you consider potential risk before you commit, so your decisions are grounded in the full picture.',
-    bullets: ['Consider risk before acting', 'Understand possible downside', 'Trade with more confidence'],
+    title: 'Two-factor login',
+    text: 'A second check at sign-in keeps your account yours alone.',
   },
   {
-    icon: ClipboardList,
-    title: 'AI Stock Analysis',
-    text: 'AI assisted analysis can help you review stock and market information in one place. Instead of jumping between sources, you get a clearer, organised view of the data that matters.',
-    bullets: ['Review stocks efficiently', 'Bring data together', 'Clear, organised summaries'],
+    icon: Wallet,
+    title: 'Clear pricing',
+    text: 'Every fee is shown before you pay, with nothing hidden.',
   },
   {
-    icon: TrendingUp,
+    icon: MousePointer2,
     tone: 'accent',
-    title: 'AI Trend Projection',
-    text: 'Trend tools help you understand the possible direction of a market based on recent price behaviour. Projections are informational, never guaranteed, and always worth combining with your own research.',
-    bullets: ['Understand market direction', 'Spot momentum shifts', 'Informational, not guaranteed'],
+    title: 'Full control',
+    text: 'No trade is opened or closed without your say-so.',
   },
 ];
 
-const whyCards = [
-  { icon: Clock, title: 'Faster Market Research', text: 'Cover more ground in less time and focus on the opportunities that look most relevant.' },
-  { icon: BarChart3, tone: 'accent', title: 'Pattern Analysis', text: 'Let AI scan for patterns so you can spend your time thinking, not sorting.' },
-  { icon: List, title: 'Better Organisation', text: 'Keep your research in one clear, structured place instead of scattered across tabs.' },
-  { icon: Eye, tone: 'accent', title: 'Trend Monitoring', text: 'Stay aware of how markets are moving without constant manual checking.' },
-  { icon: ShieldCheck, title: 'Risk Awareness', text: 'Bring risk into the conversation early, before you make a decision.' },
-  { icon: ClipboardList, tone: 'accent', title: 'Structured Decisions', text: 'Follow a clearer process instead of reacting to market noise.' },
+const testimonials = [
+  {
+    rating: 4.5,
+    quote:
+      'I had never used anything automated before and I expected to be lost in the settings. Each one explains what it does before you change it, so my first afternoon was far less intimidating than I had braced for.',
+    name: 'Priya N.',
+    city: 'Melbourne',
+    // Real reviewer photo: /assets/img/testimonials/priya-n.jpg
+    avatar: null,
+  },
+  {
+    rating: 5,
+    quote:
+      'I work office hours, so the thing that sold me was being able to pause it. Knowing I can stop everything in one step is what made me comfortable leaving it running overnight.',
+    name: 'Daniel R.',
+    city: 'Brisbane',
+    // Real reviewer photo: /assets/img/testimonials/daniel-r.jpg
+    avatar: null,
+  },
+  {
+    rating: 4,
+    quote:
+      'The part I use most is the record of what it did and what it passed on. I have learned more from reading that than from any explainer video I sat through beforehand.',
+    name: 'Megan T.',
+    city: 'Perth',
+    // Real reviewer photo: /assets/img/testimonials/megan-t.jpg
+    avatar: null,
+  },
 ];
 
-const processNodes = [
-  { icon: Database, title: 'Market Data', text: 'The platform gathers and organises market information.' },
-  { icon: Cpu, tone: 'accent', title: 'AI Analysis', text: 'AI reviews the data for patterns, trends and signals.' },
-  { icon: Lightbulb, title: 'Trading Insights', text: 'You get clear, plain language insights to review.' },
-  { icon: MousePointer2, tone: 'accent', title: 'Your Decision', text: 'You decide what to do, based on your own research and risk.' },
-];
+const initials = (name) =>
+  name
+    .split(' ')
+    .map((part) => part.replace(/[^A-Za-z]/g, '').charAt(0))
+    .join('')
+    .toUpperCase();
+
+function StarRating({ rating }) {
+  const full = Math.floor(rating);
+  const half = rating % 1 >= 0.5;
+  return (
+    <div className="flex items-center gap-0.5" role="img" aria-label={`${rating} out of 5 stars`}>
+      {Array.from({ length: 5 }).map((_, i) => {
+        if (i < full) {
+          return <Star key={i} className="h-4 w-4 fill-amber text-amber" aria-hidden="true" />;
+        }
+        if (i === full && half) {
+          return <StarHalf key={i} className="h-4 w-4 fill-amber text-amber" aria-hidden="true" />;
+        }
+        return <Star key={i} className="h-4 w-4 text-line-strong" aria-hidden="true" />;
+      })}
+    </div>
+  );
+}
 
 const faqs = [
   {
-    q: 'What Types Of Investors Is Trader AI Suitable For?',
-    a: 'Trader AI is built for people who want a clearer, more organised way to research markets. It can suit beginners who are still learning how markets work, and more experienced traders who want to speed up their research. The tools focus on information and analysis, not automatic trading decisions.',
+    q: 'What is Trader AI?',
+    a: 'Trader AI is a trading signals platform that sends you clear buy or sell alerts with entry, stop-loss and take-profit levels, plus the reason behind each one.',
   },
   {
-    q: 'Is Trader AI Legit?',
-    a: 'Trader AI is a provider of informational tools for market research and analysis. It is not a broker and it does not hold or trade your money on your behalf. As with any financial tool, it is worth doing your own research and reading the risk disclaimer before you start. We do not guarantee profits or claim that any specific outcome is certain.',
+    q: 'How are Trader AI signals created?',
+    a: 'Our analysts study price charts and market news, and a signal goes out only when a setup meets our entry rules.',
   },
   {
-    q: 'Does AI Trading Work?',
-    a: 'AI trading tools can help you work with market information more quickly, but they do not remove risk. AI can assist with pattern recognition, trend analysis and research. What AI cannot do is predict markets with certainty. Financial markets are unpredictable, and any tool should support your own judgement rather than replace it.',
+    q: 'Is Trader AI available across Australia?',
+    a: 'Yes. You can sign up and receive signals from any state or territory, on any device with an internet connection.',
   },
   {
-    q: 'Is There An AI Trading App?',
-    a: 'Trader AI is accessed through a web based platform, which means you can use it from most devices with an internet connection. For the most up to date information on device support and access options, it is best to check the platform directly.',
+    q: 'Do I need trading experience?',
+    a: 'No. Each alert is written in simple language, so beginners can follow along and learn as they go.',
   },
   {
-    q: 'Are AI Trading Apps Legit?',
-    a: 'Legitimacy varies from one product to another, so it is always worth checking a platform\'s terms, privacy policy and risk disclaimer before you commit. A reputable AI trading tool should be clear about what it does, honest about risk, and never promise guaranteed returns. Be cautious of any platform that claims you can make money automatically or with no risk.',
+    q: 'Will Trader AI place trades for me?',
+    a: 'No. You review every signal and choose whether to act on it.',
   },
   {
-    q: 'How Do I Get Started With Trader AI?',
-    a: 'Start by exploring the platform and the resources on this site. Read through how the tools work, review the features that matter to you, and make sure you understand the risks. When you are ready, get in touch through the contact page and our team can point you in the right direction.',
+    q: 'Which markets are covered?',
+    a: 'Crypto, forex, shares and commodities, all from one account.',
   },
   {
-    q: 'Do I Need Experience To Use AI Trading Tools?',
-    a: 'No. Trader AI is designed to present market information in plain, clear language, so you do not need a finance background to get value from it. It is still important to understand the basics of trading and risk before you commit real money. The tools are here to support your research, not to make decisions for you.',
+    q: 'Do I need to download an app?',
+    a: 'No. Trader AI runs in your web browser on phone, tablet or computer.',
+  },
+  {
+    q: 'What is the minimum deposit?',
+    a: 'You can get started with A$250.',
+  },
+  {
+    q: 'How long do withdrawals take?',
+    a: 'Withdrawal times depend on your payment method. Contact our support team for the current processing time before you request one.',
+  },
+  {
+    q: 'Can I lose money?',
+    a: 'Yes. All trading carries risk, so only trade with money you can afford to lose.',
   },
 ];
 
 export default function Home() {
   return (
     <>
-      {/* 1. Hero */}
+      {/* 1. Hero Section */}
       <section
         className="relative overflow-hidden bg-navy-900 text-ondark"
         style={{
@@ -142,99 +312,53 @@ export default function Home() {
           <div className="grid items-center gap-12 py-16 md:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
             <div>
               <h1 className="text-4xl font-bold text-ondark md:text-5xl lg:text-[3.35rem]">
-                Trader AI <span className="text-accent">Australia</span>
+                Trade With a Clear Plan, Not a Gut Feeling
               </h1>
-              <p className="mt-4 max-w-md text-lg text-ondark-muted">
-                AI powered tools designed to help you analyse markets, understand trends, and make
-                more informed trading decisions.
+              <p className="mt-4 max-w-xl text-lg text-ondark-muted">
+                Trader AI gives traders across Australia researched trade ideas with set entry,
+                stop-loss and take-profit levels, so you know your next move before you make it.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Button href="/register/" size="lg" icon>
-                  Get Started
-                </Button>
-                <Button href="/ai-trading/" variant="ghost-light" size="lg">
-                  Explore AI Trading
+                  Create Your Free Account
                 </Button>
               </div>
-              <ul className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-sm text-ondark-muted">
-                {heroNotes.map((n) => (
-                  <li key={n} className="flex items-center gap-2">
-                    <Check className="h-[18px] w-[18px] text-accent" aria-hidden="true" />
-                    {n}
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-5 text-sm text-ondark-muted">
+                Quick sign-up · Upfront pricing · Private and protected
+              </p>
             </div>
             <HeroDashboard />
           </div>
         </Container>
       </section>
 
-      {/* 2. Trust & value */}
+      {/* 2. What Is Trader AI? */}
       <section className="py-16 md:py-24">
-        <Container>
-          <Reveal>
-            <SectionHead
-              eyebrow="Why Explore Trader AI"
-              title="Practical Tools For Clearer Market Decisions"
-              lead="Trader AI is built around one idea: making market research easier to understand, so you can act with more confidence."
-            />
-          </Reveal>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {trustCards.map((c) => (
-              <Reveal key={c.title}>
-                <ValueCard icon={c.icon} tone={c.tone} title={c.title}>
-                  {c.text}
-                </ValueCard>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* 3. What Is Trader AI */}
-      <section className="bg-soft py-16 md:py-24">
         <Container>
           <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
             <Reveal>
               <div>
-                <SectionHead
-                  eyebrow="What Is Trader AI"
-                  title="What Is Trader AI?"
-                  align="left"
-                  className="mb-4"
-                />
+                <SectionHead title="What Is Trader AI?" align="left" className="mb-4" />
                 <div className="space-y-4 text-ink-500">
                   <p>
-                    Trader AI is a set of AI assisted tools that help you research and understand
-                    financial markets. Instead of scrolling through endless charts and headlines,
-                    the platform organises market data, highlights possible patterns, and presents
-                    it in plain English.
+                    Trader AI is a trading signals platform that tracks the crypto, forex, share and
+                    commodity markets and sends you actionable buy or sell alerts, each with an
+                    entry price, a stop-loss, a take-profit target and a plain explanation of the
+                    reasoning, so you can decide for yourself whether to place the trade.
                   </p>
                   <p>
-                    It focuses on three things: bringing market information together, spotting
-                    possible patterns and trends, and flagging risk so you can make more informed
-                    choices.
-                  </p>
-                  <p>
-                    You can use it to review stocks, market trends and price movements, depending
-                    on the data sources available. The platform supports your research. It doesn't
-                    make decisions for you.
+                    Timing is where most traders go wrong: buying too late, selling too early or
+                    holding on without an exit. Trader AI takes the guesswork out of that timing.
+                    Because every alert explains its reasoning, you also learn to read the market
+                    yourself over time.
                   </p>
                 </div>
-                <Checklist
-                  items={[
-                    'Tools for research, not financial advice',
-                    'You always make the final call',
-                    'Plain language, no walls of jargon',
-                  ]}
-                />
               </div>
             </Reveal>
             <Reveal>
               <img
                 src="/assets/img/img-1.webp"
-                alt="Trader AI platform illustration"
+                alt="Trader AI trading signals platform illustration"
                 width={640}
                 height={620}
                 loading="lazy"
@@ -246,113 +370,97 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* 4. How to use (steps) */}
-      <section className="py-16 md:py-24">
+      {/* 3. How Trader AI Signals Work */}
+      <section className="bg-soft py-16 md:py-24">
         <Container>
           <Reveal>
-            <SectionHead
-              eyebrow="Getting Started"
-              title="How To Use Trader AI To Trade Stocks In Australia"
-              lead="Five simple steps. The tools support your research, but every decision stays with you."
-            />
+            <SectionHead title="How Trader AI Signals Work" />
           </Reveal>
           <Reveal>
-            <Steps items={steps} />
+            <ProcessFlow nodes={signalSteps} />
           </Reveal>
         </Container>
       </section>
 
-      {/* 5. Key features */}
+      {/* 4. Quick Highlights */}
+      <section className="py-16 md:py-24">
+        <Container>
+          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+            <Reveal>
+              <img
+                src="/assets/img/img-3.webp"
+                alt="Australian market signals illustration"
+                width={640}
+                height={617}
+                loading="lazy"
+                decoding="async"
+                className="h-auto w-full"
+              />
+            </Reveal>
+            <Reveal>
+              <div>
+                <SectionHead title="Quick Highlights" align="left" className="mb-4" />
+                <div className="rounded-2xl border border-line bg-white p-6">
+                  <Checklist items={highlights} />
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      {/* 5. Why Choose Us */}
       <section className="bg-soft py-16 md:py-24">
         <Container>
           <Reveal>
-            <SectionHead
-              eyebrow="Key Features"
-              title="A Focused Set Of Research Tools"
-              lead="Built around patterns, trends, risk and clear analysis. Nothing more than you need."
-            />
+            <SectionHead title="Why Choose Us" />
           </Reveal>
-          <div className="grid gap-5 md:grid-cols-2">
-            {features.map((f) => (
-              <Reveal key={f.title}>
-                <FeatureCard icon={f.icon} tone={f.tone} title={f.title} bullets={f.bullets}>
-                  {f.text}
-                </FeatureCard>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {whyCards.map((c) => (
+              <Reveal key={c.title}>
+                <ValueCard icon={c.icon} tone={c.tone} title={c.title}>
+                  {c.text}
+                </ValueCard>
               </Reveal>
             ))}
           </div>
           <Reveal>
             <div className="mt-9 text-center">
-              <Button href="/features/" variant="ghost-dark">
-                Explore All Features
+              <Button href="/register/" size="lg" icon>
+                Get Started With Trader AI
               </Button>
             </div>
           </Reveal>
         </Container>
       </section>
 
-      {/* 6. AI Trading */}
+      {/* 6. How to Get Started */}
       <section className="py-16 md:py-24">
         <Container>
-          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
-            <Reveal>
-              <div>
-                <SectionHead eyebrow="AI Trading" title="What Is AI Trading?" align="left" className="mb-4" />
-                <div className="space-y-4 text-ink-500">
-                  <p>
-                    AI trading means using artificial intelligence to help with market research and
-                    analysis. Instead of a person manually reviewing every chart, AI can process
-                    large amounts of market information quickly and highlight the parts that might
-                    matter.
-                  </p>
-                  <p>
-                    AI tools can assist with pattern recognition, trend analysis and organising
-                    data. They can process far more information than a person realistically could,
-                    and they can surface it in a way that's easier to act on.
-                  </p>
-                  <p>
-                    But AI can't see the future. Markets are unpredictable, and no tool can
-                    guarantee an outcome. AI provides information and analysis. The decision, and
-                    the risk, always sit with you.
-                  </p>
-                </div>
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <Button href="/ai-trading/">Explore AI Trading</Button>
-                  <Button href="/how-it-works/" variant="ghost-dark">
-                    See How It Works
-                  </Button>
-                </div>
-              </div>
-            </Reveal>
-            <Reveal>
-              <div>
-                <img
-                  src="/assets/img/img-2.webp"
-                  alt="AI trading tools illustration"
-                  width={640}
-                  height={617}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-auto w-full"
-                />
-              </div>
-            </Reveal>
-          </div>
+          <Reveal>
+            <SectionHead title="How to Get Started" lead="Set Up Your Account in 4 Easy Steps" />
+          </Reveal>
+          <Reveal>
+            <Steps items={setupSteps} columns={4} />
+          </Reveal>
+          <Reveal>
+            <div className="mt-9 text-center">
+              <Button href="/register/" size="lg" icon>
+                Open My Account
+              </Button>
+            </div>
+          </Reveal>
         </Container>
       </section>
 
-      {/* 7. Why use AI trading tools */}
+      {/* 7. Markets */}
       <section className="bg-soft py-16 md:py-24">
         <Container>
           <Reveal>
-            <SectionHead
-              eyebrow="The Benefits"
-              title="Why Use AI Trading Tools?"
-              lead="AI trading tools don't replace your judgement. They help you do your best thinking, faster."
-            />
+            <SectionHead title="Markets" />
           </Reveal>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {whyCards.map((c) => (
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {markets.map((c) => (
               <Reveal key={c.title}>
                 <ValueCard icon={c.icon} tone={c.tone} title={c.title}>
                   {c.text}
@@ -363,119 +471,159 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* 8. How Trader AI works */}
+      {/* 8. Features */}
       <section className="py-16 md:py-24">
         <Container>
           <Reveal>
-            <SectionHead
-              eyebrow="The Process"
-              title="How Trader AI Works"
-              lead="Four simple stages, from raw market data to your own informed decision."
-            />
+            <SectionHead title="Features" />
           </Reveal>
-          <Reveal>
-            <ProcessFlow nodes={processNodes} />
-          </Reveal>
-        </Container>
-      </section>
-
-      {/* 9. Review preview */}
-      <section className="bg-soft py-16 md:py-24">
-        <Container>
-          <Reveal>
-            <SectionHead
-              eyebrow="Trader AI Review Australia"
-              title="Want A Closer Look First?"
-              lead="Our review page walks through what Trader AI is, how it works, who it's for, and the things worth considering. It's an honest look at the platform, not a sales pitch."
-            />
-          </Reveal>
-          <Reveal>
-            <div className="text-center">
-              <Button href="/trader-ai-review-australia/" size="lg" icon>
-                Read The Trader AI Review
-              </Button>
-            </div>
-          </Reveal>
-        </Container>
-      </section>
-
-      {/* 10. Australian audience */}
-      <section className="py-16 md:py-24">
-        <Container>
-          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
-            <Reveal>
-              <div>
-                <SectionHead
-                  eyebrow="Made For Australia"
-                  title="Built With Australian Investors In Mind"
-                  align="left"
-                  className="mb-4"
-                />
-                <p className="text-ink-500">
-                  Australian investors approach the market in their own way, and Trader AI reflects
-                  that. The platform is designed for people who want to understand the Australian
-                  share market, research local and global stocks, and make considered decisions.
-                </p>
-                <Checklist
-                  items={[
-                    'Australian share market focus',
-                    'Research tools for local and global stocks',
-                    'Plain language with Australian spelling and context',
-                    'Risk awareness built into the experience',
-                  ]}
-                />
-              </div>
-            </Reveal>
-            <Reveal>
-              <div>
-                <img
-                  src="/assets/img/img-3.webp"
-                  alt="Australian market analysis illustration"
-                  width={640}
-                  height={617}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-auto w-full"
-                />
-              </div>
-            </Reveal>
+          <div className="flex flex-wrap justify-center gap-5">
+            {features.map((c) => (
+              <Reveal
+                key={c.title}
+                className="w-full sm:w-[calc((100%_-_20px)/2)] lg:w-[calc((100%_-_40px)/3)]"
+              >
+                <ValueCard icon={c.icon} tone={c.tone} title={c.title}>
+                  {c.text}
+                </ValueCard>
+              </Reveal>
+            ))}
           </div>
         </Container>
       </section>
 
-      {/* 11. FAQ */}
+      {/* 9. Who It's For */}
       <section className="bg-soft py-16 md:py-24">
         <Container>
           <Reveal>
-            <SectionHead eyebrow="Common Questions" title="Frequently Asked Questions" />
+            <SectionHead title="Who It's For" />
           </Reveal>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {audience.map((c) => (
+              <Reveal key={c.title}>
+                <ValueCard icon={c.icon} tone={c.tone} title={c.title}>
+                  {c.text}
+                </ValueCard>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* 10. Security & Transparency */}
+      <section className="py-16 md:py-24">
+        <Container>
           <Reveal>
-            <FaqList items={faqs} />
+            <SectionHead title="Security & Transparency" />
+          </Reveal>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {security.map((c) => (
+              <Reveal key={c.title}>
+                <ValueCard icon={c.icon} tone={c.tone} title={c.title}>
+                  {c.text}
+                </ValueCard>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal>
+            <div className="mx-auto mt-8 max-w-3xl">
+              <Callout variant="caution">
+                <p>
+                  <strong className="text-ink-900">Risk notice:</strong> Trading involves
+                  significant risk, and you may lose some or all of your money. Trader AI signals
+                  are general information only and do not take into account your personal
+                  objectives, financial situation or needs. Past performance is not a reliable
+                  indicator of future results.
+                </p>
+              </Callout>
+            </div>
           </Reveal>
           <Reveal>
             <div className="mt-8 text-center">
-              <Button href="/faq/" variant="ghost-dark">
-                See All FAQs
+              <Button href="/register/" size="lg" icon>
+                Sign Up Securely
               </Button>
             </div>
           </Reveal>
         </Container>
       </section>
 
-      {/* 12. Final CTA */}
+      {/* 11. Testimonials */}
+      <section className="bg-soft py-16 md:py-24">
+        <Container>
+          <Reveal>
+            <SectionHead title="Testimonials" />
+          </Reveal>
+          <div className="flex flex-wrap justify-center gap-5">
+            {testimonials.map((t) => (
+              <Reveal
+                key={t.name}
+                className="w-full sm:w-[calc((100%_-_20px)/2)] lg:w-[calc((100%_-_40px)/3)]"
+              >
+                <figure className="flex h-full flex-col rounded-2xl border border-line bg-white p-7">
+                  <div className="mb-4 flex items-center justify-between gap-3">
+                    <StarRating rating={t.rating} />
+                    <span className="text-xs font-semibold text-ink-500">{t.rating} / 5</span>
+                  </div>
+                  <blockquote className="flex-1 text-[15px] leading-relaxed text-ink-700">
+                    “{t.quote}”
+                  </blockquote>
+                  <figcaption className="mt-5 flex items-center gap-3 border-t border-line pt-4">
+                    {t.avatar ? (
+                      <img
+                        src={t.avatar}
+                        alt={`${t.name} avatar`}
+                        width={44}
+                        height={44}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-11 w-11 shrink-0 rounded-full object-cover"
+                      />
+                    ) : (
+                      <span
+                        aria-hidden="true"
+                        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-soft font-display text-sm font-semibold text-primary"
+                      >
+                        {initials(t.name)}
+                      </span>
+                    )}
+                    <div>
+                      <div className="font-display text-sm font-semibold text-ink-900">{t.name}</div>
+                      <div className="text-xs text-ink-500">{t.city}</div>
+                    </div>
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* 12. FAQs */}
       <section className="py-16 md:py-24">
         <Container>
           <Reveal>
-            <CtaBand
-              title="Ready To Explore AI Trading?"
-              lead="Discover practical AI powered tools for market analysis and trading research."
-              primary={{ label: 'Get Started', href: '/register/' }}
-              secondary={{ label: 'Learn More', href: '/how-it-works/' }}
-            />
+            <SectionHead title="FAQs" />
+          </Reveal>
+          <Reveal>
+            <FaqList items={faqs} />
           </Reveal>
         </Container>
       </section>
 
+      {/* 13. Final CTA */}
+      <section className="bg-soft py-16 md:py-24">
+        <Container>
+          <CtaBand
+            title="Ready to Trade With More Confidence?"
+            lead="Join Trader AI and start receiving clear, explained trade ideas, with every decision left in your hands."
+            primary={{ label: 'Start Free Today', href: '/register/' }}
+          />
+          <p className="mt-4 text-center text-sm text-ink-500">
+            2-minute sign-up · No joining fee
+          </p>
+        </Container>
+      </section>
     </>
   );
 }

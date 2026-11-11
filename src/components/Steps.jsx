@@ -1,4 +1,10 @@
-export default function Steps({ items }) {
+const COLUMNS = {
+  3: 'md:grid-cols-3',
+  4: 'md:grid-cols-4',
+  5: 'md:grid-cols-5',
+};
+
+export default function Steps({ items, columns = 5 }) {
   return (
     <div className="relative">
       {/* connecting line (desktop only) */}
@@ -6,7 +12,7 @@ export default function Steps({ items }) {
         className="absolute left-[10%] right-[10%] top-5 hidden h-px bg-gradient-to-r from-primary/20 via-accent/45 to-primary/20 md:block"
         aria-hidden="true"
       />
-      <ol className="relative grid gap-8 md:grid-cols-5 md:gap-4">
+      <ol className={`relative grid gap-8 md:gap-4 ${COLUMNS[columns] || COLUMNS[5]}`}>
         {items.map((s, i) => (
           <li key={s.title} className="flex items-start gap-4 md:flex-col md:items-center md:text-center">
             <span className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary font-display text-sm font-bold text-white shadow-[0_4px_12px_rgba(23,105,224,0.28)]">
